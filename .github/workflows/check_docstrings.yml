@@ -16,4 +16,4 @@ jobs:
         python-version: '3.11'
 
     - name: Run docstring check
-      run: python utils/docstring_check.py
+      run: python utils/check_docstrings.py
