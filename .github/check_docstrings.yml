@@ -1,0 +1,19 @@
+name: testdocs
+
+on: [push, pull_request]
+
+jobs:
+  check_docstrings:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.11'
+
+    - name: Run docstring check
+      run: python utils/docstring_check.py
