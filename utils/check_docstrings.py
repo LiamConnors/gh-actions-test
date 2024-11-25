@@ -13,4 +13,8 @@ def get_python_files() -> list[Path]:
 
 if __name__ == '__main__':
     x = get_python_files()
-    print(x)
+    if x:
+        print(x)
+        sys.exit(1)
+    else:
+        print("No Python files found.")
