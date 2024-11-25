@@ -1,5 +1,6 @@
 from pathlib import Path
 import os
+import sys
 
 package_path = Path('./package_code')
 
